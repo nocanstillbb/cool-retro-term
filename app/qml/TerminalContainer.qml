@@ -28,7 +28,8 @@ ShaderTerminal {
     property alias qterminal: terminal.kterminal
     property alias qterminalSession: terminal.ksession
 
-    property real devicePixelRatio: terminalWindow.screen.devicePixelRatio
+    property real devicePixelRatio: 1
+    //property real devicePixelRatio: terminalWindow.screen.devicePixelRatio
 
     id: mainShader
     opacity: appSettings.windowOpacity * 0.3 + 0.7
