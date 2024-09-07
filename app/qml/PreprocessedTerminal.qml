@@ -39,6 +39,7 @@ Item{
     property real scaleTexture: 1.0
     property alias title: ksession.title
     property alias kterminal: kterminal
+    property alias ksession: ksession
 
     property size terminalSize: kterminal.terminalSize
     property size fontMetrics: kterminal.fontMetrics

@@ -25,6 +25,8 @@ import "utils.js" as Utils
 ShaderTerminal {
     property alias title: terminal.title
     property alias terminalSize: terminal.terminalSize
+    property alias qterminal: terminal.kterminal
+    property alias qterminalSession: terminal.ksession
 
     property real devicePixelRatio: terminalWindow.screen.devicePixelRatio
 
