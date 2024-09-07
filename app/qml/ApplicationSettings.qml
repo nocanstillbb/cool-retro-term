@@ -325,7 +325,8 @@ QtObject {
         height = settings.height !== undefined ? settings.height : height
 
         fontNames = settings.fontNames !== undefined ? settings.fontNames : fontNames
-        fontScaling = settings.fontScaling !== undefined ? settings.fontScaling : fontScaling
+        //fontScaling = settings.fontScaling !== undefined ? settings.fontScaling : fontScaling
+        fontScaling = 0.5
 
         showMenubar = settings.showMenubar !== undefined ? settings.showMenubar : showMenubar
 
