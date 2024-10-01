@@ -29,6 +29,7 @@ ShaderTerminal {
     property alias qterminalSession: terminal.ksession
 
     property real devicePixelRatio: 1
+    signal clicked(var e)
     //property real devicePixelRatio: terminalWindow.screen.devicePixelRatio
 
     id: mainShader
@@ -50,6 +51,10 @@ ShaderTerminal {
     PreprocessedTerminal {
         id: terminal
         anchors.fill: parent
+        onClicked:function(e)
+        {
+            parent.clicked(e)
+        }
     }
 
     //  EFFECTS  ////////////////////////////////////////////////////////////////

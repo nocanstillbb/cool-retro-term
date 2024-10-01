@@ -44,6 +44,8 @@ Item{
     property size terminalSize: kterminal.terminalSize
     property size fontMetrics: kterminal.fontMetrics
 
+    signal clicked(var e)
+
     // Manage copy and paste
     Connections {
         target: copyAction
@@ -97,6 +99,8 @@ Item{
 
     QMLTermWidget {
         id: kterminal
+
+        property alias vscrollbar: kterminalScrollbar
 
         property int textureResolutionScale: appSettings.lowResolutionFont ? devicePixelRatio : 1
         property int margin: appSettings.totalMargin / screenScaling
@@ -232,6 +236,7 @@ Item{
         onReleased: {
             var coord = correctDistortion(mouse.x, mouse.y);
             kterminal.simulateMouseRelease(coord.x, coord.y, mouse.button, mouse.buttons, mouse.modifiers);
+            terminalContainer.clicked(mouse)
         }
         onPositionChanged: {
             var coord = correctDistortion(mouse.x, mouse.y);

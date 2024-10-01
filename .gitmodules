@@ -1,4 +1,4 @@
 [submodule "qmltermwidget"]
 	path = qmltermwidget
-	url = https://github.com/Swordfish90/qmltermwidget
+	url = git@github.com:nocanstillbb/qmltermwidget.git
 	branch = unstable
